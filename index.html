@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Caribe</title>
+</head>
+<body>
+    <script>
+
+         //Boas vindas e primeiros passos
+        alert("Bem vindo ao Hotel Caribe! É um imenso prazer ter você por aqui!")
+
+        var nome_do_usuario = prompt("Por favor, digite seu nome")
+        alert("Olá, " + nome_do_usuario + ", Bem vindo! É um imenso prazer ter você por aqui!")
+
+        var senha = prompt("Por favor, digite a senha");
+        inicio();
+        function inicio(){
+        switch(senha) {
+            case '2678':
+                alert('Senha correta!');
+                escolha();
+                break;
+            default:
+                    alert('Senha incorreta, tente novamente.');
+                    break;
+        }
+        }
+
+         //Escolhas do usuário
+        function escolha(){
+            var escolha = parseInt(prompt("Por favor, selecione a opção desejada:\n\n1. Hospedagem \n2. Cadastro de hóspedes \n3. Manter cadastro de hóspedes \n4. Agendar evento \n5. Gasolina \n6. Sair"));
+            switch(escolha){
+                case 1: hospedagem();
+                    break;
+                case 2: cadastro_de_hospedes();
+                    break;
+                case 3: manter_cadastro();
+                    break;
+                case 4: eventos();
+                    break;
+                case 5: calcular_combustivel();
+                    break;
+                case 6: sair();
+                    break;
+                default: erro();
+                    break;
+            }
+        }
+        
+        function hospedagem(){
+        var valor_diaria = parseFloat(prompt("Digite o valor padrão da diária."))
+        if(valor_diaria >= 1){
+            alert("Quantas diárias serão necessárias?")
+        }else if(valor_diaria <= 1){
+            alert("Valor inválido")
+        }else{
+            alert("Valor inválido, " + nome_do_usuario)
+        }
+    }
+    </script>
+</body>
+</html>
